@@ -1,0 +1,14 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "bookontology:Writer" "bookontology:Book" ; /*classes style*/
+	"bookontology:Writer1" -> "bookontology:Poem1" [ label = "bookontology:writes" ];
+	"creator:Creator" -> "rdfs:comment" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "bookontology:Writer" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "bookontology:isWrittenBy" [ label = "owl:onProperty" ];
+	"NULL" -> "bookontology:Book" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "bookontology:writes" [ label = "owl:onProperty" ];
+	"bookontology:Writer" -> "xsd:string" [ label = "bookontology:writerName" ];
+	"bookontology:Writer" -> "bookontology:Book" [ label = "bookontology:writes" ];
+
+}
